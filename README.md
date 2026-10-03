@@ -1,5 +1,7 @@
 # Pokemon API
 
+![Tests](https://github.com/borizSam/pokemon-fastapi/actions/workflows/tests.yml/badge.svg)
+
 API REST rápida construida con [FastAPI](https://fastapi.tiangolo.com/) que expone un catálogo de Pokémon en memoria. Pensada para levantarse al instante, sin base de datos ni dependencias externas.
 
 ## Características
@@ -99,6 +101,17 @@ Eliminar un Pokémon:
 
 ```bash
 curl -X DELETE http://127.0.0.1:8000/pokemon/1
+```
+
+## Tests
+
+El proyecto incluye pruebas unitarias con `pytest` sobre todos los endpoints (casos de éxito y error). Se ejecutan automáticamente en GitHub Actions en cada push y pull request a `main`.
+
+Para correrlas en local:
+
+```bash
+pip install -r requirements-dev.txt
+pytest -v
 ```
 
 ## Notas
